@@ -60,13 +60,13 @@ function init() {
   // NFT marker controls for image tracking
   new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
     type: 'nft',
-    descriptorsUrl: 'assets/images/nft/image',
+    descriptorsUrl: 'image',
     changeMatrixMode: 'modelViewMatrix',
   });
 
   // Load GLB model
   let loader = new THREE.GLTFLoader();
-  loader.load('assets/models/model.glb', function (gltf) {
+  loader.load('model.glb', function (gltf) {
     model = gltf.scene;
     model.scale.set(0.5, 0.5, 0.5);
     markerRoot.add(model);
